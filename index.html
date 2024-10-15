@@ -1,28 +1,29 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breaking Bad</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./src/index.js"></script>
-
- </head>
- <body>
-    <!--Home Section-->
-    <header id="home">
-        <div class="container">
-            <nav id="nav-bar">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#quotes" class="nav-link">Quotes</a></li>
-                    <li class="nav-item"><a href="#action" class="nav-link">Action</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div id="Quotes">
+    <script src="./src/index.js" defer></script>
+</head>
+<body id="home">
+    <h1>Breaking Bad Quotes Generator</h1>
+    <div class="container">
+        <button id="get-quote">Get a random Quote</button>
+        <br><br>
+        <form id="add-quote">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" required><br><br>
+            <label for="quote">Quote</label>
+            <input type="text" name="quote" id="quote" required><br><br>
+            <button id="submit">Submit</button>
+            <button>Delete</button>
+        </form>
         
+        <div class="quotes">
+            
+        </div>
     </div>
- </body>
- </html>
+</body>
+</html>

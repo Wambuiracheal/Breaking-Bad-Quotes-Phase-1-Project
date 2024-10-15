@@ -4,14 +4,14 @@
     box-sizing: border-box;
   }
 
-body{
-    background-color: #b5f88e;
+#home{
+    margin: 0;
+    padding: 0;
     height: 100vh;
     width: 100vw;
-
 }
 
-#home{
+#home::before{
     background-image: url(./images/bad.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -23,32 +23,21 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-}
-/*NAVBAR STYLING*/
-#nav-bar .nav-list{
-    list-style: none;
-    display: flex;
-    padding: 20px;
-    margin: 0;
-    position: sticky;
-    float: right;
+    filter: blur(3px);
+    z-index: -1;
 }
 
-.nav-item{
-    margin-right: 20px;
-    font-size: 20px;
-    display: block;
+h1{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 50px;
 }
-
-.container {
-    width: 100%;
-    max-width: 100%;
+.container{
+    background-color: rgb(6, 65, 6);
+    margin: auto;
+    width: 50%;
+    height: 70%;
+    border: 1px solid green;
+    padding: 10px;
+    flex-direction: column;
 }
-
-.nav-link{
-    text-decoration: none;
-    color: #eef0f3;font-size: 30px;
-    font-size: 30px;
-    font-weight: bolder;
-}
-
