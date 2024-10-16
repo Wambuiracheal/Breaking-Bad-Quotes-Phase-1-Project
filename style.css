@@ -5,7 +5,7 @@
   }
 
 html, body {
-    height: 100%; /* Ensures body takes up full viewport height */
+    height: auto; /* Ensures body takes up full viewport height */
     overflow: hidden; /* Prevents the entire page from being scrollable */
 }
 
@@ -37,7 +37,8 @@ html, body {
 h1{
     color: aliceblue;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 #get-quote{
@@ -46,27 +47,66 @@ h1{
     font-weight: bold;
     font-size: 20px;
     border-radius: 20px;
-    margin-top: 30px;
     
 }
+
+label{
+    font-weight: bold;
+    align-items: center;
+    margin-left: 70px;
+    color: aliceblue;
+}
+
+input{
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 17px;
+}
+
+#add{
+    margin-left: 200px;
+    width: 70px;
+    border-radius: 20px solid green;
+    padding: 10px;
+}
+
+.submit-btn{
+    margin-left: 200px;
+    width: 70px;
+    border-radius: 30px;
+    padding: 10px;
+}
 .container{
-    background-color: rgb(6, 65, 6);
     margin: auto;
-    width: 50%;
-    height: 70%;
-    border: 1px solid green;
+    width: 90%;
+    height: auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
 }
 
-#quotes p{
+#add-quote{
+    align-items: center;
+}
+
+.quote{
+    border: 2px solid black;
+    flex-wrap: wrap;
     background-color: rgb(130, 240, 130);
-    margin: 20px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius:10px;
     text-align: center;
+    flex-wrap: wrap;
+    width: 25%;
+    gap: 10px;
+}
+
+#quotes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
