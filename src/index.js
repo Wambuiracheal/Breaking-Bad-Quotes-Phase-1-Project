@@ -111,10 +111,10 @@ function displayQuote(quote) {
      myForm.appendChild(formInput)
      myForm.appendChild(submitBtn)
  
+     //submit button
      myForm.addEventListener('submit', (e) => {
          e.preventDefault();
          let value = formInput.value
-
          let comment = document.createElement("div");
          comment.textContent = value
  
