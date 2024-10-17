@@ -29,6 +29,19 @@ function fetchSingleQuote(){
     .catch(error => console.log(error))
 }
 
+//generate a random quote button
+let genButton = document.getElementById("get-quote")
+genButton.addEventListener('click', () => {
+    fetch(singleQuoteUrl)
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(quote => {
+            displayQuote(quote);
+        })
+    })
+    .catch(error => console.log(error))
+})
+
 //mouseover effect for the generate random button 
 let quoteBtn =  document.getElementById("get-quote")
 quoteBtn.addEventListener("mouseover", () =>{
@@ -113,9 +126,6 @@ function displayQuote(quote) {
      quoteDiv.appendChild(myForm)
  
 }
-
-let genButton = document.getElementById("get-quote")
-genButton.addEventListener('click', fetchSingleQuote)
 
 //POST
 let newQuotesForm = document.getElementById("new-quotes");
