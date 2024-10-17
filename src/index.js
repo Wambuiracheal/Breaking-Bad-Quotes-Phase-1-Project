@@ -61,7 +61,7 @@ submitBtn.addEventListener("mouseleave", () =>{
 })
 
 //displayquote function/like/delete/comment for quotes
-function displayQuote(quote) {
+function displayQuote(quote, isDEfault = false) {
     const quoteDiv = document.createElement("div");
     quoteDiv.classList.add("quote");
     quoteDiv.innerHTML = `
