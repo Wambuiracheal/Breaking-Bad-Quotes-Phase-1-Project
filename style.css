@@ -99,9 +99,9 @@ input{
     background-color: rgb(130, 240, 130);
     padding: 10px;
     border-radius:10px;
+    width: 300px;
+    height: auto;
     text-align: center;
-    flex-wrap: wrap;
-    width: 25%;
     gap: 10px;
 }
 
@@ -109,4 +109,56 @@ input{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+#comment {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 45px;
+    display: flex;
+}
+
+.comment-form{
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+}
+
+#btnSubmit{
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 45px;
+    line-height: 45px;
+}
+
+#btnSubmit:hover {
+    background-color: #218838;
+}
+
+#delete-btn{
+    height: 30px;
+    border-radius: 5px;
+    background-color: #e46e6e;
+    color: antiquewhite;
+    gap: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+#like-button{
+    height: 30px;
+    border-radius: 5px;
+    background-color:  #28a745;
+    gap: 5px;
+    width: 100%;
 }
