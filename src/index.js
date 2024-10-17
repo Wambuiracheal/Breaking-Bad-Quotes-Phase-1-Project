@@ -114,18 +114,30 @@ function displayQuote(quote) {
      myForm.appendChild(formInput)
      myForm.appendChild(submitBtn)
  
-     //submit button
-     myForm.addEventListener('submit', (e) => {
-         e.preventDefault();
-         let value = formInput.value
-         let comment = document.createElement("div");
-         comment.textContent = value
- 
-         quoteDiv.appendChild(comment)
- 
-         myForm.reset();
-     });
- 
+        //submit button
+        myForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let value = formInput.value
+
+            //appending a delete function for the comments uploaded
+            let commentDiv = document.createElement("div")
+            commentDiv.textContent = value
+
+            let commDeleteBtn = document.createElement("button")
+            commDeleteBtn.textContent ="Delete"
+            commDeleteBtn.classList.add("delete-comment")
+
+            commDeleteBtn.addEventListener('click', ()=> {
+                commentDiv.remove()
+            })
+
+            commentDiv.appendChild(commDeleteBtn)
+    
+            quoteDiv.appendChild(commentDiv)
+    
+            myForm.reset();
+        });
+    
      quoteDiv.appendChild(myForm)
  
 }
