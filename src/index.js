@@ -71,6 +71,9 @@ function displayQuote(quote) {
         </p>
     `;
 
+    let buttonContainer = document.createElement("div");
+    buttonContainer.classList.add("button")
+
     //like
     let likeBtn = document.createElement("button");
     likeBtn.id="like-button"

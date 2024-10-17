@@ -5,8 +5,8 @@
   }
 
 html, body {
-    height: auto; /* Ensures body takes up full viewport height */
-    overflow: hidden; /* Prevents the entire page from being scrollable */
+    height: auto;
+    overflow: hidden;
 }
 
 
@@ -18,7 +18,7 @@ html, body {
 }
 
 #home::before{
-    background-image: url(./images/bb.jpg);
+    background-image: url(./images/bad.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -96,24 +96,27 @@ input{
 .quote{
     border: 2px solid black;
     flex-wrap: wrap;
-    background-color: rgba(130, 240, 130, 0.1);
+    background-color: rgba(97, 146, 97, 0.5);
     padding: 10px;
     border-radius:10px;
     width: 300px;
     height: auto;
     text-align: center;
-    gap: 10px;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    color: grey;
+    align-items: center;
 }
 
 #quotes{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: rgba(7, 73, 18, 0.9);
 }
 
 #comment {
@@ -137,13 +140,13 @@ input{
 
 .button-container {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
     gap: 10px;
 }
 #btnSubmit{
-    background-color: #5c5959;
-    color: black;
+    background-color: #242020;
+    color:  aliceblue;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -160,12 +163,12 @@ input{
 #delete-btn{
     height: 30px;
     border-radius: 5px;
-    background-color: #5c5959;
-    color: black;
+    background-color: #242020;
+    color: aliceblue;
     gap: 5px;
     text-align: center;
     cursor: pointer;
-    width: 50%;
+    width: 70px;
 }
 
 #delete-btn:hover{
@@ -176,11 +179,12 @@ input{
 #like-button{
     height: 30px;
     border-radius: 5px;
-    background-color:  #5c5959;
+    background-color:  #242020;
     text-align: center;
     cursor: pointer;
-    width: 50%;
-    font-size: 20px;
+    width: 40px;
+    font-size: 24px;
     color: black;
 }
+
 
