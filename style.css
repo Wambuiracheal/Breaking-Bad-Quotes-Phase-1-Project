@@ -187,4 +187,18 @@ input{
     color: black;
 }
 
+#delete-comment{
+    height: 30px;
+    border-radius: 5px;
+    background-color: #242020;
+    color: aliceblue;
+    gap: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 70px;
+}
+
+.delete-comment:hover{
+    background-color: red;
+}
 

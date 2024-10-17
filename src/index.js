@@ -1,4 +1,4 @@
-const url = "https://api.breakingbadquotes.xyz/v1/quotes/4"
+const url = "https://api.breakingbadquotes.xyz/v1/quotes/3"
 const singleQuoteUrl = "https://api.breakingbadquotes.xyz/v1/quotes/1";
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -96,47 +96,47 @@ function displayQuote(quote) {
     let quoteList = document.getElementById("quotes");
     quoteList.appendChild(quoteDiv);
 
-    //comment
+    //comment form
      let myForm = document.createElement("form");
-     myForm.classList.add("comment-form");
+        myForm.classList.add("comment-form");
  
      let formInput = document.createElement("input");
-     formInput.name = "comment"
-     formInput.id = "comment"
-     formInput.placeholder = "comment here..."
-     formInput.required = true
+        formInput.name = "comment"
+        formInput.id = "comment"
+        formInput.placeholder = "comment here..."
+        formInput.required = true
      
      let submitBtn = document.createElement("button");
-     submitBtn.textContent = "Add"
-     submitBtn.id="btnSubmit"
-     submitBtn.type = "submit"
+        submitBtn.textContent = "Add"
+        submitBtn.id="btnSubmit"
+        submitBtn.type = "submit"
 
      myForm.appendChild(formInput)
      myForm.appendChild(submitBtn)
  
-        //submit button
-        myForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let value = formInput.value
+    //submit button
+    myForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let value = formInput.value
 
-            //appending a delete function for the comments uploaded
-            let commentDiv = document.createElement("div")
-            commentDiv.textContent = value
+        //appending a delete function for the comments uploaded
+        let commentDiv = document.createElement("div")
+        commentDiv.textContent = value
 
-            let commDeleteBtn = document.createElement("button")
-            commDeleteBtn.textContent ="Delete"
-            commDeleteBtn.classList.add("delete-comment")
+        let commDeleteBtn = document.createElement("button")
+        commDeleteBtn.textContent ="Delete"
+        commDeleteBtn.classList.add("delete-comment")
 
-            commDeleteBtn.addEventListener('click', ()=> {
-                commentDiv.remove()
-            })
+        commDeleteBtn.addEventListener('click', ()=> {
+            commentDiv.remove()
+        })
 
-            commentDiv.appendChild(commDeleteBtn)
-    
-            quoteDiv.appendChild(commentDiv)
-    
-            myForm.reset();
-        });
+        commentDiv.appendChild(commDeleteBtn)
+
+        quoteDiv.appendChild(commentDiv)
+
+        myForm.reset();
+    });
     
      quoteDiv.appendChild(myForm)
  
