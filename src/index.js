@@ -29,21 +29,6 @@ function fetchSingleQuote(){
     .catch(error => console.log(error))
 }
 
-//generate a random quote button
-let genButton = document.getElementById("get-quote")
-genButton.addEventListener('click', () => {
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-
-        data.forEach(quote => {
-            displayQuote(quote);
-        })
-
-    })
-    .catch(error => console.log(error))
-})
-
 //mouseover effect for the generate random button 
 let quoteBtn =  document.getElementById("get-quote")
 quoteBtn.addEventListener("mouseover", () =>{
@@ -62,6 +47,7 @@ submitBtn.addEventListener("mouseleave", () =>{
     submitBtn.style.background = ""
 })
 
+//displayquote function/like/delete/comment for quotes
 function displayQuote(quote) {
     const quoteDiv = document.createElement("div");
     quoteDiv.classList.add("quote");
@@ -72,7 +58,7 @@ function displayQuote(quote) {
         </p>
     `;
 
-    // Liking and disliking the quote
+    //like
     let likeBtn = document.createElement("button");
     likeBtn.id="like-button"
     likeBtn.textContent = "♥️";
@@ -82,60 +68,54 @@ function displayQuote(quote) {
     });
     quoteDiv.appendChild(likeBtn);
     
-    // Delete button
+    ///delete
     let deleteBtn = document.createElement("button");
     deleteBtn.textContent = "delete"
     deleteBtn.id="delete-btn"
     deleteBtn.addEventListener('click', () => {
-        quoteDiv.remove();  // Remove the entire quote div
+        quoteDiv.remove();
     });
     quoteDiv.appendChild(deleteBtn);
 
-    // Append the quoteDiv to the list of quotes
     let quoteList = document.getElementById("quotes");
     quoteList.appendChild(quoteDiv);
 
-     // Form for each quote
+    //comment
      let myForm = document.createElement("form");
      myForm.classList.add("comment-form");
  
-     // Input field
      let formInput = document.createElement("input");
      formInput.name = "comment"
      formInput.id = "comment"
      formInput.placeholder = "comment here..."
      formInput.required = true
      
-     // add
      let submitBtn = document.createElement("button");
      submitBtn.textContent = "Add"
      submitBtn.id="btnSubmit"
      submitBtn.type = "submit"
- 
-     // Append the input and button to the form
+
      myForm.appendChild(formInput)
      myForm.appendChild(submitBtn)
  
-     // form submission
      myForm.addEventListener('submit', (e) => {
          e.preventDefault();
          let value = formInput.value
- 
-         //paragraph for the comment
+
          let comment = document.createElement("div");
          comment.textContent = value
  
-         //append the comment to the quoteDiv
          quoteDiv.appendChild(comment)
  
-         // Reset the form after submitting
          myForm.reset();
      });
  
-     // Append the form to the quoteDiv
      quoteDiv.appendChild(myForm)
  
 }
+
+let genButton = document.getElementById("get-quote")
+genButton.addEventListener('click', fetchSingleQuote)
 
 //POST
 let newQuotesForm = document.getElementById("new-quotes");
